@@ -16,18 +16,44 @@
       $('#cardgame').toptrumps({
         'fields': [{
           'name': 'Fläche',
+          'unit': 'km2',
           'comparison': '>'
         }, {
           'name': 'Einwohner',
           'comparison': '>'
         }, {
           'name': 'Höhe',
+          'unit': 'm. ü. NN',
+          'comparison': '>'
+        }, {
+          'name': 'Kanalnetzes',
+          'unit': 'km',
           'comparison': '>'
         }],
         'cards': [{
           'name': 'Wuppertal',
           'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Wuppertal-100508-12833-Uferstra%C3%9Fe.jpg/296px-Wuppertal-100508-12833-Uferstra%C3%9Fe.jpg',
-          'fields': [160, "168,39", 345425]
+          'fields': ["168,39", 345425, 160, 1535]
+        }, {
+          'name': 'Düsseldorf',
+          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Duss_Par_from_Tower.JPG/170px-Duss_Par_from_Tower.JPG',
+          'fields': ["217,41", 604527, 38, 1552]
+        }, {
+          'name': 'Essen',
+          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Zeche_Zollverein_abends.jpg/280px-Zeche_Zollverein_abends.jpg',
+          'fields': ["210,34", 573784, 116, 1673]
+        }, {
+          'name': 'Solingen',
+          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Clemens.jpg/296px-Clemens.jpg',
+          'fields': ["89,54", 156771, 221, 613]
+        }, {
+          'name': 'Münster',
+          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Muenster_St_Paulus-Dom.jpg/220px-Muenster_St_Paulus-Dom.jpg',
+          'fields': ["303,28", 302178, 60, 1558]
+        }, {
+          'name': 'Bochum',
+          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Schauspielhaus_Bochum%2C_Nachtaufnahme.JPG/220px-Schauspielhaus_Bochum%2C_Nachtaufnahme.JPG',
+          'fields': ["145,66", 361876, 100, 1254]
         }],
         'renderCard': function($card, card, fields) {
           $card.find('.tt-card-fields')
