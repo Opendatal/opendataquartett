@@ -3,35 +3,60 @@ globalStore.cards = [];
 var town = {};
 var ready = 0;
 $(document).ready(function() {
-  $.when(
-    $.getJSON('fields.json', function(data) {
-      globalStore.fields = data;
-    }),
+  $.getJSON('fields.json', function(data) {
+    globalStore.fields = data;
+    var $overlay = $('<div/>').addClass('tt-overlay');
+    $('<p/>').html('Select Categories').addClass('tt-start').appendTo($overlay);
+    for (i = 0; i < 5; i++) {
+      var $select = $('<select>').prop("id", "field-" + i).addClass('tt-start').appendTo($overlay);
+      j = 0;
+      $.each(data, function() {
+        $('<option/>').val(this.name).html(this.name).appendTo($select);
+        if (i == j)
+          $select.val(this.name);
+        j++;
+      });
+      $("<br/>").appendTo($overlay);
+    }
 
-    $.getJSON('towns.json', function(data) {
-      var towns = data;
-      $.each(towns, function() {
-        ready++;
-        $.getJSON('towns/' + this + '.json', function(data) {
-          var attr = data;
-          town = [];
-          town.name = attr.name;
-          town.image = attr.image;
-          town.fields = [];
-          $.each(attr.fields, function() {
-            $.each(this, function() {
-              var tmp = this;
-              town.fields.push(parseFloat(this));
-            });
+    $('<p/>').addClass('tt-start').html('Start Game').appendTo($overlay);
+
+    $overlay.appendTo("#cardgame");
+
+    $('p.tt-start').click(function(e) {
+      loadTowns();
+      e.preventDefault();
+    });
+
+
+  })
+});
+
+
+function loadTowns() {
+  $.getJSON('towns.json', function(data) {
+    var towns = data;
+    $.each(towns, function() {
+      ready++;
+      $.getJSON('towns/' + this + '.json', function(data) {
+        var attr = data;
+        town = [];
+        town.name = attr.name;
+        town.image = attr.image;
+        town.fields = [];
+        $.each(attr.fields, function() {
+          $.each(this, function() {
+            var tmp = this;
+            town.fields.push(parseFloat(this));
           });
-          globalStore.cards.push(town);
-          ready--;
-          loadGame();
-        })
+        });
+        globalStore.cards.push(town);
+        ready--;
+        loadGame();
       })
     })
-  );
-});
+  });
+}
 
 function loadGame() {
   if (ready != 0)
