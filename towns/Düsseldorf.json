@@ -1,0 +1,11 @@
+{
+  "name": "Düsseldorf",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Gehry_photo_office_buildings_river_bank_fa%C3%A7ade_01_D%C3%BCsseldorf_Germany_2005-07-27.jpg/220px-Gehry_photo_office_buildings_river_bank_fa%C3%A7ade_01_D%C3%BCsseldorf_Germany_2005-07-27.jpg",
+  "fields": [{
+    "Fläche": 217.41,
+    "Einwohner": 604527,
+    "Höhe": 38,
+    "Kanalnetzes": 1552,
+    "Gesamtschulen": 6
+  }]
+}

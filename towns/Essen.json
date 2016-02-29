@@ -1,0 +1,11 @@
+{
+  "name": "Essen",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Zeche_Zollverein_abends.jpg/280px-Zeche_Zollverein_abends.jpg",
+  "fields": [{
+    "Fläche": 210.34,
+    "Einwohner": 573784,
+    "Höhe": 116,
+    "Kanalnetzes": 1673,
+    "Gesamtschulen": 8
+  }]
+}

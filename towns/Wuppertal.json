@@ -1,0 +1,11 @@
+{
+  "name": "Wuppertal",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Wuppertal-100508-12833-Uferstra%C3%9Fe.jpg/296px-Wuppertal-100508-12833-Uferstra%C3%9Fe.jpg",
+  "fields": [{
+    "Fläche": 168.39,
+    "Einwohner": 345425,
+    "Höhe": 160,
+    "Kanalnetzes": 1535,
+    "Gesamtschulen": 6
+  }]
+}

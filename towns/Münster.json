@@ -1,0 +1,11 @@
+{
+  "name": "Münster",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Muenster_St_Paulus-Dom.jpg/220px-Muenster_St_Paulus-Dom.jpg",
+  "fields": [{
+    "Fläche": 303.28,
+    "Einwohner": 302178,
+    "Höhe": 60,
+    "Kanalnetzes": 1558,
+    "Gesamtschulen": 3
+  }]
+}

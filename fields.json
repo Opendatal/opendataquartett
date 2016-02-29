@@ -1,0 +1,19 @@
+[{
+  "name": "Fläche",
+  "unit": "km2",
+  "comparison": ">"
+}, {
+  "name": "Einwohner",
+  "comparison": ">"
+}, {
+  "name": "Höhe",
+  "unit": "m. ü. NN",
+  "comparison": ">"
+}, {
+  "name": "Kanalnetzes",
+  "unit": "km",
+  "comparison": ">"
+}, {
+  "name": "Gesamtschulen",
+  "comparison": ">"
+}]

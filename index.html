@@ -1,94 +1,20 @@
 <!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Open Data Quartett</title>
 
-<head>
-  <meta charset="utf-8">
-  <title>Open Data Quartett</title>
+    <link href="top_trumps/jquery.toptrumps.css" media="all" rel="stylesheet" type="text/css">
 
-  <link href="top_trumps/jquery.toptrumps.css" media="all" rel="stylesheet" type="text/css">
+    <!--<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="top_trumps/jquery.toptrumps.js"></script>
+    <script src="app.js"></script>
 
-  <!--<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>-->
-  <script src="jquery-1.7.2.min.js"></script>
-  <script src="top_trumps/jquery.toptrumps.js"></script>
+  </head>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#cardgame').toptrumps({
-        'fields': [{
-          'name': 'Fläche',
-          'unit': 'km2',
-          'comparison': '>'
-        }, {
-          'name': 'Einwohner',
-          'comparison': '>'
-        }, {
-          'name': 'Höhe',
-          'unit': 'm. ü. NN',
-          'comparison': '>'
-        }, {
-          'name': 'Kanalnetzes',
-          'unit': 'km',
-          'comparison': '>'
-        }, {
-          'name': 'Gesamtschulen',
-          'comparison': '>'
-        }],
-        'cards': [{
-          'name': 'Wuppertal',
-          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Wuppertal-100508-12833-Uferstra%C3%9Fe.jpg/296px-Wuppertal-100508-12833-Uferstra%C3%9Fe.jpg',
-          'fields': ["168,39", 345425, 160, 1535, 6]
-        }, {
-          'name': 'Düsseldorf',
-          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Gehry_photo_office_buildings_river_bank_fa%C3%A7ade_01_D%C3%BCsseldorf_Germany_2005-07-27.jpg/220px-Gehry_photo_office_buildings_river_bank_fa%C3%A7ade_01_D%C3%BCsseldorf_Germany_2005-07-27.jpg',
-          'fields': ["217,41", 604527, 38, 1552, 6]
-        }, {
-          'name': 'Essen',
-          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Zeche_Zollverein_abends.jpg/280px-Zeche_Zollverein_abends.jpg',
-          'fields': ["210,34", 573784, 116, 1673, 8]
-        }, {
-          'name': 'Solingen',
-          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Clemens.jpg/296px-Clemens.jpg',
-          'fields': ["89,54", 156771, 221, 613, 4]
-        }, {
-          'name': 'Münster',
-          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Muenster_St_Paulus-Dom.jpg/220px-Muenster_St_Paulus-Dom.jpg',
-          'fields': ["303,28", 302178, 60, 1558, 3]
-        }, {
-          'name': 'Bochum',
-          'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Schauspielhaus_Bochum%2C_Nachtaufnahme.JPG/220px-Schauspielhaus_Bochum%2C_Nachtaufnahme.JPG',
-          'fields': ["145,66", 361876, 100, 1254, 7]
-        }],
-        'renderCard': function($card, card, fields) {
-          $card.find('.tt-card-fields')
-            .before('<img src="' + card.image + '" alt="' + card.name + '" width="300" height="300">');
-        },
-        'trick': 'requeue',
-
-        'onComplete': function($instance, settings) {
-          var message = '';
-          if (settings.points.cpu > settings.points.user) {
-            message += '<h2>Du hast verloren!</h2>';
-          } else if (settings.points.cpu < settings.points.user) {
-            message += '<h2>Glückwunsch. Du hast gewonnen!</h2>';
-          } else {
-            message += '<h2>Schwach. Es ist ein unentschieden.</h2>';
-          }
-
-          message += '<p>Vielen Dank fürs spielen.</p>';
-          message += '<p>Den Code gibts auf <a href="https://github.com/">Github</a>.</p>';
-          message += '<p><a href="http://www.exmatrikulator.de">Nico Heßler</a> <a href="#">Sam Zeini</a></p>';
-          message += '<p><a href="http://www.opendatal.de">Opendatal</a></p>';
-          message += '<p><a href="javascript:location.reload();">Erneut spielen</a></p>';
-
-          $instance.prepend($('<div>').css('text-align', 'center').html(message));
-        }
-      });
-    });
-  </script>
-</head>
-
-<body>
-  <div id="cardgame"></div>
-</body>
+  <body>
+    <div id="cardgame"></div>
+  </body>
 
 </html>

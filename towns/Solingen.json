@@ -1,0 +1,11 @@
+{
+  "name": "Solingen",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Clemens.jpg/296px-Clemens.jpg",
+  "fields": [{
+    "Fläche": 89.54,
+    "Einwohner": 156771,
+    "Höhe": 221,
+    "Kanalnetzes": 613,
+    "Gesamtschulen": 4
+  }]
+}

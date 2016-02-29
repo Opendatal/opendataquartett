@@ -1,0 +1,11 @@
+{
+  "name": "Bochum",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Schauspielhaus_Bochum%2C_Nachtaufnahme.JPG/220px-Schauspielhaus_Bochum%2C_Nachtaufnahme.JPG",
+  "fields": [{
+    "Fläche": 145.66,
+    "Einwohner": 361876,
+    "Höhe": 100,
+    "Kanalnetzes": 1254,
+    "Gesamtschulen": 7
+  }]
+}
