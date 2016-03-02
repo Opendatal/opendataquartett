@@ -1,13 +1,13 @@
 [{
-  "name": "Fläche",
+  "name": "FlÃ¤che",
   "unit": "km2",
   "comparison": ">"
 }, {
   "name": "Einwohner",
   "comparison": ">"
 }, {
-  "name": "Höhe",
-  "unit": "m. ü. NN",
+  "name": "HÃ¶he",
+  "unit": "m. Ã¼. NN",
   "comparison": ">"
 }, {
   "name": "Kanalnetzes",

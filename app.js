@@ -1,5 +1,7 @@
 var globalStore = {};
 globalStore.cards = [];
+globalStore.fields = [];
+globalStore.selectedFields = [];
 var town = {};
 var ready = 0;
 $(document).ready(function() {
@@ -24,6 +26,13 @@ $(document).ready(function() {
     $overlay.appendTo("#cardgame");
 
     $('p.tt-start').click(function(e) {
+      for (i = 0; i < 5; i++) {
+        $.each(globalStore.fields, function() {
+          if (this.name == $("#field-" + i).val()) {
+            globalStore.selectedFields.push(this);
+          }
+        });
+      }
       loadTowns();
       e.preventDefault();
     });
@@ -44,10 +53,14 @@ function loadTowns() {
         town.name = attr.name;
         town.image = attr.image;
         town.fields = [];
-        $.each(attr.fields, function() {
-          $.each(this, function() {
-            var tmp = this;
-            town.fields.push(parseFloat(this));
+        $.each(globalStore.selectedFields, function() {
+          var $field = this.name;
+          $.each(attr.fields, function() {
+            $.each(this, function(key, value) {
+              if (key == $field) {
+                town.fields.push(parseFloat(value));
+              }
+            });
           });
         });
         globalStore.cards.push(town);
@@ -62,10 +75,8 @@ function loadGame() {
   if (ready != 0)
     return;
 
-  var tmp1 = globalStore.fields;
-  var tmp2 = globalStore.cards;
   $('#cardgame').toptrumps({
-    'fields': globalStore.fields,
+    'fields': globalStore.selectedFields,
     'cards': globalStore.cards,
     'renderCard': function($card, card, fields) {
       $card.find('.tt-card-fields').before('<img src="' + card.image + '" alt="' + card.name + '" width="300" height="300">');
