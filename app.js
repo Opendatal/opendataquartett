@@ -8,9 +8,9 @@ $(document).ready(function() {
   $.getJSON('fields.json', function(data) {
     globalStore.fields = data;
     var $overlay = $('<div/>').addClass('tt-overlay');
-    $('<p/>').html('Select Categories').addClass('tt-start').appendTo($overlay);
+    $('<h1/>').html('Kategorien w&auml;hlen').addClass('tt-start-h1').appendTo($overlay);
     for (i = 0; i < 5; i++) {
-      var $select = $('<select>').prop("id", "field-" + i).addClass('tt-start').appendTo($overlay);
+      var $select = $('<select>').prop("id", "field-" + i).addClass('tt-start-select').appendTo($overlay);
       j = 0;
       $.each(data, function() {
         $('<option/>').val(this.name).html(this.name).appendTo($select);
@@ -21,7 +21,7 @@ $(document).ready(function() {
       $("<br/>").appendTo($overlay);
     }
 
-    $('<p/>').addClass('tt-start').html('Start Game').appendTo($overlay);
+    $('<p/>').addClass('tt-start').html('Spiel starten').appendTo($overlay);
 
     $overlay.appendTo("#cardgame");
 

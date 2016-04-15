@@ -1,0 +1,17 @@
+
+.tt-overlay {
+    text-align: center;
+}
+.tt-start-select {
+    width: 80%;
+    padding: 5px;
+    margin: 5px;
+}
+.tt-start-h1 {
+  width: 100%;
+}
+
+.tt-start-button{
+  position: relative;
+  top: 30%;
+}
