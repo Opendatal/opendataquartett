@@ -193,16 +193,8 @@
           methods.renderCardDeck(tt, settings, settings.players[i]);
         }
 
-        var $overlay = $('<div/>').addClass('tt-overlay');
-        $('<a/>').addClass('tt-start-button').html('Start Game').appendTo($overlay);
-        $overlay.appendTo(tt);
-
-        $('a.tt-start-button', tt).click(function(e) {
-          methods.startGame(tt, tt.topTrumps);
-          e.preventDefault();
-        });
-
         settings.onInit(tt, $.extend(true, {}, settings));
+				methods.startGame(tt, tt.topTrumps);
       },
 
       'renderCardDeck' : function(tt, settings, player) {
@@ -240,7 +232,7 @@
             methods.renderCard(cards.user, 'user', settings, tt);
 
             var $next = $('<div/>').addClass('tt-next');
-            $('<a/>').addClass('tt-next-button').html('next').appendTo($next);
+            $('<a/>').addClass('tt-next-button').html('weiter').appendTo($next);
             $next.appendTo(tt);
 
             $('#tt-card-field-user-' + id).addClass('active');
@@ -264,7 +256,7 @@
           $('#tt-card-field-cpu-' + field).addClass('active');
 
           var $next = $('<div/>').addClass('tt-next');
-          $('<a/>').addClass('tt-next-button').html('next').appendTo($next);
+          $('<a/>').addClass('tt-next-button').html('weiter').appendTo($next);
           $next.appendTo(tt);
 
           $('a.tt-next-button', tt).click(function(e) {
