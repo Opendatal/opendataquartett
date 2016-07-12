@@ -94,7 +94,7 @@ function loadGame() {
       }
 
       message += '<p>Vielen Dank fürs spielen.</p>';
-      message += '<p>Den Code gibts auf <a href="https://github.com/">Github</a>.</p>';
+      message += '<p>Den Code gibts auf <a href="https://github.com/Opendatal/opendataquartett">Github</a>.</p>';
       message += '<p><a href="http://www.exmatrikulator.de">Nico Heßler</a> <a href="#">Sam Zeini</a></p>';
       message += '<p><a href="http://www.opendatal.de">Opendatal</a></p>';
       message += '<p><a href="javascript:location.reload();">Erneut spielen</a></p>';
